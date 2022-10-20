@@ -14,7 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatBadgeModule} from '@angular/material/badge';
-
+import { RatingModule } from 'ngx-bootstrap/rating';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     ReactiveFormsModule,
     MatMenuModule,
     MatButtonModule,
-    MatBadgeModule
+    MatBadgeModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

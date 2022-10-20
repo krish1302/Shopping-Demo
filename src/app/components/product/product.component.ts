@@ -12,6 +12,10 @@ export class ProductComponent implements OnInit {
   product!: any
   products!: any
   id: any
+  rate = 3
+  max =5
+
+
   constructor(private api: ApiService, private route: ActivatedRoute){
     this.id = this.route.snapshot.paramMap.get('id') || ''
     console.log(this.id)
