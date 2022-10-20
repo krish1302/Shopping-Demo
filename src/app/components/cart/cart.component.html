@@ -1,0 +1,22 @@
+<div *ngIf="count == 0">
+    <img src="/assets/images/empty.png" alt="" style="margin-top: 50%;margin-left:110%;">
+</div>
+
+<div *ngFor="let id of selected_id; index as i">
+    <div *ngFor="let product of products">
+        <div *ngIf="product.id == id">
+            <div class="product">
+                <img [src]="product.image" alt="" width="80%">
+                <div class="details">
+                    <b>Title: {{product?.title}}</b><br>
+                    <b>category: {{product?.category}}</b><br>
+                    <b>Price:  $ {{product?.price}}</b><br>
+                    <b>Description: {{product?.description}}</b>
+                    <b style="visibility: hidden;">1</b>
+                    <b style="visibility: hidden;">2</b>
+                    <button class="btn btn-small btn-outline-secondary" (click)="removeFromCart(i)">Remove to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

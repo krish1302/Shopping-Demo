@@ -1,0 +1,16 @@
+
+<div class="categories">
+    <div  *ngFor="let category of categories">
+        <button [ngClass]="selected_category == category ? 'btn btn-primary': 'btn btn-outline-primary'" (click)="getProducts(category)" routerLink="/home">{{category}}</button>
+    </div>
+</div>
+
+<div class="products">
+    <div *ngFor="let product of products">
+        <div class="product" [routerLink]="['/product', product.id]">
+            <img [src]="product.image" alt="" width="100px" height="100px">
+            <b>{{product.title}}</b>
+        </div>
+    </div>
+</div>
+
