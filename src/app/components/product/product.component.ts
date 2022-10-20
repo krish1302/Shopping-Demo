@@ -12,7 +12,6 @@ export class ProductComponent implements OnInit {
   product!: any
   products!: any
   id: any
-  rate = 3
   max =5
 
 

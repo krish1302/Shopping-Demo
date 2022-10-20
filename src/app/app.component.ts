@@ -33,6 +33,9 @@ export class AppComponent implements OnInit{
   goToProduct(){
     if(this.typed){
       this.router.navigate(['/product/'+this.typed])
+      .then(() => {
+        window.location.reload();
+      });
     }
   }
 
